@@ -10,10 +10,13 @@ ui <- navbarPage(
   
   # First page
   tabPanel(
-    title = "Page One",
+    title = "Introduction",
     fluidPage(
-      h2("Welcome to Page One"),
-      p("This is the content of the first page.")
+      h2("Welcome to the Bioinformatics tutorial"),
+      p("What is the Command-Line Interface
+      The CLI is a tool into which one can type commands to perform tasks.
+    The user interface that accepts the typed responses and displays the data on the screen is called a shell: bash. 
+    An all-text display (most of the time your mouse doesn’t work)")
     )
   ),
   
