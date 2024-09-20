@@ -1,24 +1,58 @@
 # Bioinfromatics tutorial ----
 
 library(shiny)
+library(shinythemes)
 
-# UI ----
-
-ui <- page_navbar(
-  title = "My App",
-  bg = "#2D89C8",
-  inverse = TRUE,
-  nav_panel(title = "One", p("First page content.")),
-  nav_panel(title = "Two", p("Second page content.")),
-  nav_panel(title = "Three", p("Third page content.")),
-  nav_spacer(),
-  nav_menu(
+# Define UI
+ui <- navbarPage(
+  title = "Bioinformatics tutorial",
+  theme = shinytheme("flatly"), # Optional: Add a theme
+  
+  # First page
+  tabPanel(
+    title = "Page One",
+    fluidPage(
+      h2("Welcome to Page One"),
+      p("This is the content of the first page.")
+    )
+  ),
+  
+  # Second page
+  tabPanel(
+    title = "Page Two",
+    fluidPage(
+      h2("Welcome to Page Two"),
+      p("This is the content of the second page.")
+    )
+  ),
+  
+  # Third page
+  tabPanel(
+    title = "Page Three",
+    fluidPage(
+      h2("Welcome to Page Three"),
+      p("This is the content of the third page.")
+    )
+  ),
+  
+  # Links menu
+  navbarMenu(
     title = "Links",
-    align = "right",
-    nav_item(tags$a("Posit", href = "https://posit.co")),
-    nav_item(tags$a("Shiny", href = "https://shiny.posit.co"))
+    tabPanel(
+      title = "Posit",
+      tags$a("Posit", href = "https://posit.co", target = "_blank")
+    ),
+    tabPanel(
+      title = "Shiny",
+      tags$a("Shiny", href = "https://shiny.posit.co", target = "_blank")
+    )
   )
 )
 
-# Create Shiny app ----
+# Define server logic
+server <- function(input, output, session) {
+  # Server logic (if any) goes here
+}
+
+# Run the application
 shinyApp(ui = ui, server = server)
