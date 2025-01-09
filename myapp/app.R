@@ -5,15 +5,15 @@ library(shinythemes)
 
 # Define UI
 ui <- navbarPage(
-  title = "Bioinformatics tutorial",
+  title = "Introduction to Bioinformatics",
   theme = shinytheme("flatly"), # Optional: Add a theme
   
   # First page
   tabPanel(
     title = "Introduction",
     fluidPage(
-      h2("Welcome to the Bioinformatics tutorial"),
-      p("What is the Command-Line Interface. The CLI is a tool into which one can type commands to perform tasks. The user interface that accepts the typed responses and displays the data on the screen is called a shell: bash. An all-text display (most of the time your mouse doesn’t work)")
+      h2("Here you can find links and resources you will need to complete this project."),
+      p("Click through the tabs to get started.")
     )
   ),
   
@@ -22,17 +22,29 @@ ui <- navbarPage(
     title = "CLI",
     fluidPage(
       h2("Command Line Access"),
+      p("We will be using the command line interface (CLI) to run our analysis. Detailed information on how to access the CLI can be found",
+      tags$a("here", href = "https://code.visualstudio.com", target = "_blank")),
+      tags$ul(
+        tags$li(
+          "Once this has been setup, please follow the following tutorial on ",
+          tags$a(
+            "CLI use", 
+            href = "https://ucdavis-bioinformatics-training.github.io/2023-September-Introduction-to-the-Command-Line-for-Bioinformatics/"
+          )
+        )
+      )
+    )
+  ),
+
+  tabPanel(
+    title = "EDDIE",
+    fluidPage(
+      h2("EDDIE"),
       p("We will be running the majority of your analysis on the University remote computer, EDDIE. 
       Detailed information on how to access EDDIE can be found ",
       tags$a("here", href = "https://www.wiki.ed.ac.uk/pages/viewpage.action?spaceKey=ResearchServices&title=Eddie", target = "_blank")),
       tags$ul(
-        tags$li("Ensure you have an active university account."),
-        tags$li(
-          "We will use visual studio code to connect to EDDIE, please follow the installation instructions ",
-          tags$a("here", href = "https://code.visualstudio.com/")
-        ),
-        tags$li("Once this has been setup, please follow the following tutorial on ", 
-          tags$a("CLI use", href = "https://ucdavis-bioinformatics-training.github.io/2023-September-Introduction-to-the-Command-Line-for-Bioinformatics/"))
+        tags$li("Ensure you have an active university account.")
       )
     )
   ),
@@ -62,8 +74,10 @@ ui <- navbarPage(
     title = "Nextflow",
     fluidPage(
       h2("Nextflow"),
-      p("We will be using GitHub to store and share our code. Please follow the instructions on how to setup a GitHub account ",
-        tags$a("and how to use it.", href = "https://training.nextflow.io/", target = "_blank"))
+      p("We will eventually be running the code via Nextflow. Please follow the instructions on how to setup Nextflow ",
+        tags$a("(local installation)", href = "https://training.nextflow.io/envsetup/02_local/", target = "_blank"),
+        " and an introductory course on",
+        tags$a("Nextflow.", href = "https://training.nextflow.io/hello_nextflow/", target = "_blank"))
     )
   ),
   
