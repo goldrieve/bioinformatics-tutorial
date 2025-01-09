@@ -22,7 +22,7 @@ ui <- navbarPage(
     title = "CLI",
     fluidPage(
       h2("Command Line Access"),
-      p("We will be using the command line interface (CLI) to run our analysis. Detailed information on how to access the CLI can be found",
+      p("We will be using the command line interface (CLI) to run our analysis.  You can access the CLI using a handy tool called Visual Studio Code. Install it ",
       tags$a("here", href = "https://code.visualstudio.com", target = "_blank")),
       tags$ul(
         tags$li(
@@ -110,12 +110,12 @@ ui <- navbarPage(
   navbarMenu(
     title = "MONO-TRAC",
     tabPanel(
-      title = "Posit",
-      tags$a("Posit", href = "https://posit.co", target = "_blank")
+      title = "Example1",
+      tags$a("=", href = "", target = "_blank")
     ),
     tabPanel(
-      title = "Shiny",
-      tags$a("Shiny", href = "https://shiny.posit.co", target = "_blank")
+      title = "Example2",
+      tags$a("", href = "", target = "_blank")
     )
   )
 )
