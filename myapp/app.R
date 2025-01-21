@@ -80,8 +80,22 @@ ui <- navbarPage(
         tags$a("Nextflow.", href = "https://training.nextflow.io/hello_nextflow/", target = "_blank"))
     )
   ),
-  
+
   # Fourth page
+  tabPanel(
+    title = "Anaconda",
+    fluidPage(
+      h2("Anaconda"),
+      p("We will need to use Anaconda for package managment, please follow this Anaconda ",
+        tags$a("tutorial", 
+               href = "https://learning.anaconda.cloud/get-started-with-anaconda?utm_campaign=learning&utm_medium=documentation&utm_source=anacondadocs&utm_content=getstartedbutton", 
+               target = "_blank")
+      )
+    )
+  ),
+  
+
+  # Fifth page
   tabPanel(
     title = "Reading",
     fluidPage(
